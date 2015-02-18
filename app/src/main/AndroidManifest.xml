@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.geronimo.sunshine.app" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,14 +19,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DayDetailActivity"
-            android:label="Day Detail"
-            android:parentActivityName=".MainActivity">
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
-        </activity>>
+                android:value="com.example.geronimo.sunshine.app.MainActivity" />
+        </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

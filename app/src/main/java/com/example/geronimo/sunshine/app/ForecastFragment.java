@@ -4,6 +4,7 @@ package com.example.geronimo.sunshine.app;
  * Created by Geronimo on 2/17/2015.
  */
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -104,10 +105,8 @@ public class ForecastFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String day = parent.getItemAtPosition(position).toString();
-                Toast toast = Toast.makeText(getActivity(),day, Toast.LENGTH_SHORT);
-                toast.show();
-
+                Intent intent =  new Intent(getActivity(),DetailActivity.class);
+                startActivity(intent);
             }
         });
         return rootView;
