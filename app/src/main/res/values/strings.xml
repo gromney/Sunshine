@@ -8,4 +8,10 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_settings">Settings</string>
 
+    <!-- location strings-->
+    <string name="pref_location_key" tranlatable="false">location</string>
+    <string name="pref_location_label">Location</string>
+    <string name="pref_location_default" tranlatable="false">94043</string>
+
+
 </resources>

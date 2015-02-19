@@ -5,9 +5,12 @@ package com.example.geronimo.sunshine.app;
  */
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.text.format.Time;
 import android.util.Log;
@@ -37,11 +40,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.prefs.Preferences;
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class ForecastFragment extends Fragment {
+public class ForecastFragment extends Fragment  {
 
     private ArrayAdapter<String> mForecastAdapter;
 
@@ -52,6 +56,7 @@ public class ForecastFragment extends Fragment {
     public void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setHasOptionsMenu(true);
+
     }
 
     @Override
@@ -64,7 +69,9 @@ public class ForecastFragment extends Fragment {
         int id = item.getItemId();
         if (id == R.id.action_refresh){
             FetchWeatherTask weatherTask = new FetchWeatherTask();
-            weatherTask.execute("94043");
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+            weatherTask.execute(preferences.getString("pref_location_key","10402"));
             return true;
         }
         return super.onOptionsItemSelected(item);
