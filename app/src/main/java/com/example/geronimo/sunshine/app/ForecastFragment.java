@@ -70,8 +70,10 @@ public class ForecastFragment extends Fragment  {
         if (id == R.id.action_refresh){
             FetchWeatherTask weatherTask = new FetchWeatherTask();
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String location = preferences.getString(getString(R.string.pref_location_key),
+                    getString(R.string.pref_location_default));
 
-            weatherTask.execute(preferences.getString("pref_location_key","10402"));
+            weatherTask.execute(location);
             return true;
         }
         return super.onOptionsItemSelected(item);
