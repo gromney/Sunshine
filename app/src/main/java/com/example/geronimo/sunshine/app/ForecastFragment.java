@@ -77,8 +77,10 @@ public class ForecastFragment extends Fragment  {
     private void updateWeather() {
         FetchWeatherTask weatherTask = new FetchWeatherTask();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String location = preferences.getString(getString(R.string.pref_location_key),
-                getString(R.string.pref_location_default));
+        String location = preferences.getString(
+                getString(R.string.pref_location_key),
+                getString(R.string.pref_location_default)
+        );
 
         weatherTask.execute(location);
     }
@@ -140,6 +142,17 @@ public class ForecastFragment extends Fragment  {
          */
         private String formatHighLows(double high, double low) {
             // For presentation, assume the user doesn't care about tenths of a degree.
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String unit = preferences.getString(
+                    getString(R.string.pref_units_key),
+                    getString(R.string.pref_units_metric)
+            );
+
+            if(unit.equals(getString(R.string.pref_units_imperial))){
+                high = (high * 1.8) + 32;
+                low = (low * 1.8) + 32;
+            }
+
             long roundedHigh = Math.round(high);
             long roundedLow = Math.round(low);
 
@@ -310,12 +323,14 @@ public class ForecastFragment extends Fragment  {
 
         @Override
         protected void onPostExecute(String[] strings) {
+            if
+                    (strings != null) {
+                mForecastAdapter.clear();
+                for (String str : strings) {
+                    mForecastAdapter.add(str);
+                }
 
-            mForecastAdapter.clear();
-            for(String str : strings) {
-                mForecastAdapter.add(str);
             }
-
         }
     }
 }

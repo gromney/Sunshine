@@ -8,10 +8,16 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_settings">Settings</string>
 
-    <!-- location strings-->
+    <!-- [CHAR LIMIT=NONE]-->
     <string name="pref_location_key" tranlatable="false">location</string>
+    <!--[CHAR LIMIT=30]-->
     <string name="pref_location_label">Location</string>
+    <!--[CHAR LIMIT=NONE]-->
     <string name="pref_location_default" tranlatable="false">94043</string>
 
+    <string name="pref_units_key" translatable="false">units</string>
+    <string name="pref_units_title">Units</string>
+    <string name="pref_units_metric" translatable="false">metric</string>
+    <string name="pref_units_imperial" translatable="false">imperial</string>
 
 </resources>
