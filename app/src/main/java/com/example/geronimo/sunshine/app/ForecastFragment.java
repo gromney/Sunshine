@@ -70,6 +70,15 @@ public class ForecastFragment extends Fragment  {
         if (id == R.id.action_refresh){
             updateWeather();
             return true;
+        }else if (id == R.id.view_location){
+            Intent intent =  new Intent(Intent.ACTION_VIEW);
+            Uri.Builder geolocation = new Uri.Builder().scheme("geo")
+                    .appendPath("0,0")
+                    .appendQueryParameter("q",getString(R.string.pref_location_default));
+            intent.setData(geolocation.build());
+            if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                startActivity(intent);
+            }
         }
         return super.onOptionsItemSelected(item);
     }
