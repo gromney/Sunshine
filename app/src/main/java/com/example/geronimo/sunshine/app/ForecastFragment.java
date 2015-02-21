@@ -36,6 +36,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.acl.LastOwnerException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,15 +71,6 @@ public class ForecastFragment extends Fragment  {
         if (id == R.id.action_refresh){
             updateWeather();
             return true;
-        }else if (id == R.id.view_location){
-            Intent intent =  new Intent(Intent.ACTION_VIEW);
-            Uri.Builder geolocation = new Uri.Builder().scheme("geo")
-                    .appendPath("0,0")
-                    .appendQueryParameter("q",getString(R.string.pref_location_default));
-            intent.setData(geolocation.build());
-            if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                startActivity(intent);
-            }
         }
         return super.onOptionsItemSelected(item);
     }
@@ -149,13 +141,9 @@ public class ForecastFragment extends Fragment  {
         /**
          * Prepare the weather high/lows for presentation.
          */
-        private String formatHighLows(double high, double low) {
+        private String formatHighLows(double high, double low, String unit) {
             // For presentation, assume the user doesn't care about tenths of a degree.
-            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            String unit = preferences.getString(
-                    getString(R.string.pref_units_key),
-                    getString(R.string.pref_units_metric)
-            );
+
 
             if(unit.equals(getString(R.string.pref_units_imperial))){
                 high = (high * 1.8) + 32;
@@ -208,6 +196,12 @@ public class ForecastFragment extends Fragment  {
             dayTime = new Time();
 
             String[] resultStrs = new String[numDays];
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String unit = preferences.getString(
+                    getString(R.string.pref_units_key),
+                    getString(R.string.pref_units_metric)
+            );
+
             for(int i = 0; i < weatherArray.length(); i++) {
                 // For now, using the format "Day, description, hi/low"
                 String day;
@@ -235,7 +229,7 @@ public class ForecastFragment extends Fragment  {
                 double high = temperatureObject.getDouble(OWM_MAX);
                 double low = temperatureObject.getDouble(OWM_MIN);
 
-                highAndLow = formatHighLows(high, low);
+                highAndLow = formatHighLows(high, low, unit);
                 resultStrs[i] = day + " - " + description + " - " + highAndLow;
             }
 

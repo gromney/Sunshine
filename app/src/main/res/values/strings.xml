@@ -7,6 +7,7 @@
     <string name="action_refresh" tranlatable="false">Refresh</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_settings">Settings</string>
+    <string name="action_map">Map Location</string>
 
     <!-- [CHAR LIMIT=NONE]-->
     <string name="pref_location_key" tranlatable="false">location</string>

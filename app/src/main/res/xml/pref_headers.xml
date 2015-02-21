@@ -2,6 +2,7 @@
 
     <!-- These settings headers are only used on tablets. -->
 
+    <!--suppress AndroidDomInspection -->
     <header
         android:fragment="com.example.geronimo.sunshine.app.SettingsActivity$GeneralPreferenceFragment"
         android:title="@string/pref_header_general" />

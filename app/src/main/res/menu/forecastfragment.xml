@@ -6,9 +6,4 @@
         android:title="@string/action_refresh"
         app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/view_location"
-        android:title="@string/pref_location_label"
-        app:showAsAction="never" />
-
 </menu>
