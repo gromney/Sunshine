@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65384614" vertical-offset="102" max-vertical-offset="510">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="510">
               <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
               <folding>
                 <element signature="tag#activity#0;tag#application#0;tag#manifest#0" expanded="false" />
@@ -68,11 +68,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="WeatherProvider.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/geronimo/sunshine/app/data/WeatherProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5709459" vertical-offset="1599" max-vertical-offset="3332">
+              <caret line="153" column="64" selection-start-line="153" selection-start-column="64" selection-end-line="153" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getWeatherByLocationSetting#0;class#WeatherProvider#0" expanded="false" />
+                <element signature="method#getWeatherByLocationSettingAndDate#0;class#WeatherProvider#0" expanded="false" />
+                <element signature="e#7065#7157#0" expanded="false" />
+                <element signature="e#9240#9288#0" expanded="false" />
+                <element signature="method#normalizeDate#0;class#WeatherProvider#0" expanded="false" />
+                <element signature="method#update#0;class#WeatherProvider#0" expanded="false" />
+                <element signature="e#10337#10427#0" expanded="false" />
+                <element signature="method#bulkInsert#0;class#WeatherProvider#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TestProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/geronimo/sunshine/app/data/TestProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.071429" vertical-offset="1644" max-vertical-offset="8602">
-              <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+            <state vertical-scroll-proportion="-3.0357144" vertical-offset="2142" max-vertical-offset="8602">
+              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1177,9 +1197,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/geronimo/sunshine/app/data/WeatherContract.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/com/example/geronimo/sunshine/app/data/TestWeatherContract.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/com/example/geronimo/sunshine/app/data/TestUriMatcher.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/geronimo/sunshine/app/data/WeatherProvider.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/com/example/geronimo/sunshine/app/data/TestProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/com/example/geronimo/sunshine/app/data/TestProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/geronimo/sunshine/app/data/WeatherProvider.java" />
       </list>
     </option>
   </component>
@@ -1343,7 +1363,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="androidTest" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1352,6 +1372,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1382,10 +1406,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1749,7 +1769,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24772036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42078364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44804087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2128,29 +2148,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/geronimo/sunshine/app/data/WeatherProvider.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="3264">
-          <caret line="125" column="5" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="510">
+          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getWeatherByLocationSetting#0;class#WeatherProvider#0" expanded="false" />
-            <element signature="method#getWeatherByLocationSettingAndDate#0;class#WeatherProvider#0" expanded="false" />
-            <element signature="e#6322#6372#0" expanded="false" />
-            <element signature="e#6932#7024#0" expanded="false" />
-            <element signature="e#9107#9155#0" expanded="false" />
-            <element signature="method#normalizeDate#0;class#WeatherProvider#0" expanded="false" />
-            <element signature="method#update#0;class#WeatherProvider#0" expanded="false" />
-            <element signature="e#10204#10294#0" expanded="false" />
-            <element signature="method#bulkInsert#0;class#WeatherProvider#0" expanded="false" />
+            <element signature="tag#activity#0;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#intent-filter#0;tag#activity#0;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#activity#1;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#meta-data#0;tag#activity#1;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#activity#2;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#meta-data#0;tag#activity#2;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#activity#3;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="tag#intent-filter#0;tag#activity#3;tag#application#0;tag#manifest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/geronimo/sunshine/app/data/TestProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.071429" vertical-offset="1644" max-vertical-offset="8602">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+        <state vertical-scroll-proportion="-3.0357144" vertical-offset="2142" max-vertical-offset="8602">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2163,19 +2181,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/geronimo/sunshine/app/data/WeatherProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65384614" vertical-offset="102" max-vertical-offset="510">
-          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.5709459" vertical-offset="1599" max-vertical-offset="3332">
+          <caret line="153" column="64" selection-start-line="153" selection-start-column="64" selection-end-line="153" selection-end-column="64" />
           <folding>
-            <element signature="tag#activity#0;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#intent-filter#0;tag#activity#0;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#activity#1;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#meta-data#0;tag#activity#1;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#activity#2;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#meta-data#0;tag#activity#2;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#activity#3;tag#application#0;tag#manifest#0" expanded="false" />
-            <element signature="tag#intent-filter#0;tag#activity#3;tag#application#0;tag#manifest#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#getWeatherByLocationSetting#0;class#WeatherProvider#0" expanded="false" />
+            <element signature="method#getWeatherByLocationSettingAndDate#0;class#WeatherProvider#0" expanded="false" />
+            <element signature="e#7065#7157#0" expanded="false" />
+            <element signature="e#9240#9288#0" expanded="false" />
+            <element signature="method#normalizeDate#0;class#WeatherProvider#0" expanded="false" />
+            <element signature="method#update#0;class#WeatherProvider#0" expanded="false" />
+            <element signature="e#10337#10427#0" expanded="false" />
+            <element signature="method#bulkInsert#0;class#WeatherProvider#0" expanded="false" />
           </folding>
         </state>
       </provider>
